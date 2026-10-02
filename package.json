@@ -1,0 +1,7 @@
+{
+  "distribution": "nft-ingress-audit",
+  "package": "nft_ingress_audit",
+  "command": "nft-ingress-audit",
+  "license": "MIT",
+  "description": "Offline nftables ingress policy structure audit"
+}

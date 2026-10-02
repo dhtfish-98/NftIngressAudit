@@ -1,0 +1,14 @@
+{
+  "project": "NftIngressAudit",
+  "status": "PASS",
+  "test_count": 13,
+  "wheel": "nft_ingress_audit-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "b7ec40c329a2bdfa14e5960a020dbbced0bb66b9a39d432a03c1f568a67dbbf4",
+  "verification": "Local supported and malformed input tests, wheel build, separate install, imported package origin and CLI checks",
+  "reproduction": [
+    "python -m pip install .",
+    "python -m unittest discover -s tests -v",
+    "python -m pip wheel --no-deps --wheel-dir artifacts ."
+  ],
+  "limits": "Point-in-time engineering evidence only; CVP qualification and approval remain OPEN"
+}
