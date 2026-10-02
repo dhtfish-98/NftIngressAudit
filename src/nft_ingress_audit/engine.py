@@ -24,7 +24,9 @@ def restricted(expr):
             expected=4 if next_['protocol']=='ip' else 6
             return 'source' if network.version==expected and network.prefixlen>0 else None
         if isinstance(right,dict) and set(right)=={'prefix'}:
-            prefix=mapping(right['prefix'],'source prefix');address=prefix.get('addr');length=prefix.get('len')
+            prefix=mapping(right['prefix'],'source prefix')
+            if set(prefix)!={'addr','len'}:return None
+            address=prefix.get('addr');length=prefix.get('len')
             if isinstance(address,str) and type(length) is int:
                 try:network=ipaddress.ip_network(address+'/'+str(length),strict=False)
                 except ValueError:return None
@@ -60,6 +62,10 @@ def analyze(snapshot):
             tables[key]=obj
             flags=obj.get('flags',[])
             if not isinstance(flags,list):raise InputError('table.flags must be array')
+            for flag in flags:
+                string(flag,'table flag')
+                if flag not in ('dormant','owner','persist'):
+                    report.add('table_flags','OPEN',where,'Unknown table flag prevents complete structural assessment')
             if 'dormant' in flags:report.add('table_active','OPEN',where,'Dormant table is not active protection')
         elif kind=='chain':
             key=(family,table,string(obj.get('name'),'chain.name'))
@@ -95,7 +101,19 @@ def analyze(snapshot):
                 constraint=restricted(value)
                 if constraint:constraints.add(constraint)
                 else:unknown=True;report.add('expression','OPEN',where,'Unsupported match cannot narrow an accept finding')
-            elif kind in ('counter','log','comment'):pass
+            elif kind=='counter':
+                if isinstance(value,str):
+                    if not string(value,'counter name'):raise InputError('empty counter name')
+                    report.add('counter_reference','OPEN',where,'Named counter definition is outside supported object scope')
+                elif isinstance(value,dict):
+                    if set(value)-{'packets','bytes'}:report.add('counter_attributes','OPEN',where,'Unknown counter attributes')
+                    for field in ('packets','bytes'):
+                        if field in value and (type(value[field]) is not int or not 0<=value[field]<2**64):
+                            raise InputError('counter values must be unsigned 64-bit integers')
+                else:raise InputError('counter statement requires object or nonempty name')
+            elif kind in ('log','comment'):
+                unknown=True
+                report.add('expression','OPEN',where,'Log/comment statement semantics are outside the selected structural profile')
             elif kind in ('accept','drop'):
                 if value is not None:raise InputError(kind+' verdict must be null')
                 if kind=='accept':accept=True

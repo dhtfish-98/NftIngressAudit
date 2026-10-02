@@ -1,14 +1,20 @@
 {
-  "project": "NftIngressAudit",
+  "name": "NftIngressAudit",
+  "group": "host",
   "status": "PASS",
-  "test_count": 13,
-  "wheel": "nft_ingress_audit-0.1.0-py3-none-any.whl",
-  "wheel_sha256": "b7ec40c329a2bdfa14e5960a020dbbced0bb66b9a39d432a03c1f568a67dbbf4",
-  "verification": "Local supported and malformed input tests, wheel build, separate install, imported package origin and CLI checks",
-  "reproduction": [
-    "python -m pip install .",
-    "python -m unittest discover -s tests -v",
-    "python -m pip wheel --no-deps --wheel-dir artifacts ."
-  ],
-  "limits": "Point-in-time engineering evidence only; CVP qualification and approval remain OPEN"
+  "version": "0.1.1",
+  "test_count": 17,
+  "source_code_sha256": "19b97068cc0eac56ce0ba51e561dee2c29069cb7c2e29bc623e65a2ba9de7b18",
+  "wheel_sha256": "d099cfdbc2d705ec9227b5feed915edd8ff5029d526b1d3d1a90189d06df634f",
+  "source_wheel_installed_bytes": "PASS",
+  "licenses": "PASS",
+  "dependency_check": "PASS",
+  "verified_utc": "2026-10-02T11:19:58.867133+00:00",
+  "wheel": "nft_ingress_audit-0.1.1-py3-none-any.whl",
+  "verification": "Fresh per-project environment; wheel/source/installed runtime byte comparison; complete installed unittest suite; pip dependency check; license byte checks",
+  "runtime_platform": "Python 3.14 macOS arm64; remote Linux CI recorded separately",
+  "application_qualification": "OPEN",
+  "whole_upstream_equivalence": "OPEN",
+  "effective_deployed_protection": "OPEN",
+  "record_kind": "Current repaired release verification"
 }

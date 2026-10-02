@@ -11,3 +11,8 @@ Install `artifacts/*.whl` and run `nft-ingress-audit examples/good.json`, or `py
 ## Evidence and limits
 
 `ORIGIN.md` pins exact upstream files/commit/hashes. `tests/` covers substantive parser/policy cases; `examples/expectations.json` lists expected CLI results. `VALIDATION.md` and `artifacts/validation.json` separate unit/wheel/CLI evidence from effective host behavior, upstream equivalence and CVP eligibility/approval, which remain OPEN. All processing is offline, read-only and uses supplied synthetic/public evidence.
+
+
+The file CLI requires non-following, non-blocking descriptor support (`O_NOFOLLOW` and `O_NONBLOCK`). Missing capabilities return controlled ERROR without weakening safe-file reads. This profile targets capable macOS/Linux environments; native Windows file-CLI behavior has not been verified. Windows observations remain supplied JSON data.
+
+Anonymous counter objects accept only bounded unsigned packet/byte counts; invalid counter shapes/types are ERROR and unknown counter attributes are OPEN. Named counter references, log/comment statements and unknown table flags remain OPEN. Source-prefix objects require exactly addr/len before counting as exposure constraints.
