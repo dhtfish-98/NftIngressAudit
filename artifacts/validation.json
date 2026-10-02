@@ -1,20 +1,13 @@
 {
   "name": "NftIngressAudit",
-  "group": "host",
+  "version": "0.1.2",
   "status": "PASS",
-  "version": "0.1.1",
   "test_count": 17,
-  "source_code_sha256": "19b97068cc0eac56ce0ba51e561dee2c29069cb7c2e29bc623e65a2ba9de7b18",
-  "wheel_sha256": "d099cfdbc2d705ec9227b5feed915edd8ff5029d526b1d3d1a90189d06df634f",
-  "source_wheel_installed_bytes": "PASS",
-  "licenses": "PASS",
-  "dependency_check": "PASS",
-  "verified_utc": "2026-10-02T11:19:58.867133+00:00",
-  "wheel": "nft_ingress_audit-0.1.1-py3-none-any.whl",
-  "verification": "Fresh per-project environment; wheel/source/installed runtime byte comparison; complete installed unittest suite; pip dependency check; license byte checks",
-  "runtime_platform": "Python 3.14 macOS arm64; remote Linux CI recorded separately",
+  "wheel_sha256": "4c23a5f5b95711e4d4a135a9fe72d7485ca77f12ab5c6c035666875ba8406b52",
+  "author": "dhtfish98",
+  "wheel": "nft_ingress_audit-0.1.2-py3-none-any.whl",
+  "verification": "Rebuilt wheel, separate installed tests, package author metadata, runtime and retained third-party notice byte verification",
+  "record_kind": "Attribution patch verification",
   "application_qualification": "OPEN",
-  "whole_upstream_equivalence": "OPEN",
-  "effective_deployed_protection": "OPEN",
-  "record_kind": "Current repaired release verification"
+  "whole_upstream_equivalence": "OPEN"
 }

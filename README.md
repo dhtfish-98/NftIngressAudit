@@ -1,5 +1,9 @@
 # NftIngressAudit
 
+Version **0.1.2**.
+
+New implementation author: **dhtfish98**. Copyright (c) 2026 dhtfish98 applies to the new implementation code. Upstream policy data, original notices and source references retain their original attribution.
+
 Offline nftables ingress policy structure audit. Complete independent **new scope**, not the whole upstream system rewritten.
 
 Input is native `nft -j list ruleset` shape: `{"nftables":[{"metainfo":{"json_schema_version":1}}, {"table":...}, {"chain":...}, {"rule":...}]}`. Every supplied table/chain/rule is structurally checked. Command objects are rejected. IPv4/IPv6 active default-drop input coverage, input/forward policies, numeric priority, owning table/chain references, dormant tables, unrestricted accept rules and source/service exposure are audited. Recognized narrowing conditions are simple interface, source prefix, port or established/related equality matches. All-address `/0` and wildcard interfaces never count as restrictions. Sets/maps, jump/goto, expressions outside supported shapes and non-ingress flow are OPEN. No packet simulation, firewall mutation or effective isolation guarantee is claimed.

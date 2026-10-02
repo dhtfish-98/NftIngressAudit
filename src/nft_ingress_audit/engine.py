@@ -1,3 +1,5 @@
+# Author: dhtfish98
+# Copyright (c) 2026 dhtfish98
 """Inspect nft list-ruleset JSON; never execute or predict firewall packet flow."""
 import ipaddress
 from .common import InputError, Report, mapping, sequence, string

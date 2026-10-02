@@ -1,3 +1,5 @@
+# Author: dhtfish98
+# Copyright (c) 2026 dhtfish98
 import unittest
 from nft_ingress_audit import analyze
 from nft_ingress_audit.common import InputError
