@@ -1,0 +1,35 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "NftIngressAudit",
+  "author": "dhtfish98",
+  "kind": "python-wheel",
+  "base_public_commit": "c4ee320a8bc821186c4168b811921d9961f2fdf2",
+  "restored_inputs": [
+    {
+      "original": "COPYRIGHT.md",
+      "stored": "项目文档/COPYRIGHT.md",
+      "sha256": "0989a74acaf06c56e82a734d27342f0bdf47258b708e88f57de464d95c094502"
+    },
+    {
+      "original": "LICENSE",
+      "stored": "项目文档/LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298"
+    },
+    {
+      "original": "ORIGIN.md",
+      "stored": "项目文档/ORIGIN.md",
+      "sha256": "369b16a06c556c7d553c197d7b67f79a02793addd52ccf3ecf91408d819d0539"
+    },
+    {
+      "original": "README.md",
+      "stored": "项目文档/README.md",
+      "sha256": "5166d4172d61561d3b98292eff7e7f881bfa178842a8507b52b363eceb8d7f03"
+    },
+    {
+      "original": "VALIDATION.md",
+      "stored": "项目文档/VALIDATION.md",
+      "sha256": "f2c1038668b9fb4109263f7031e915a654f721379f8e5611274bdc3426c1f393"
+    }
+  ],
+  "platform_entries": []
+}
