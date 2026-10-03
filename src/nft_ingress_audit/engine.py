@@ -95,10 +95,14 @@ def analyze(snapshot):
         if chain.get('hook') not in ('input','forward'):
             report.add('chain_flow','OPEN',where,'Non-ingress chain reachability not simulated');continue
         constraints=set();unknown=False;accept=False
-        for statement in rule['expr']:
+        for statement_index,statement in enumerate(rule['expr']):
             mapping(statement,'rule statement')
             if len(statement)!=1:raise InputError('statement must have one expression')
             kind,value=next(iter(statement.items()))
+            # Native terminal verdicts cannot be followed by rule statements.
+            # Unsupported jump/goto/return remain OPEN when they occur last.
+            if kind in ('accept','drop','reject','return','jump','goto') and statement_index!=len(rule['expr'])-1:
+                raise InputError('terminal verdict must be the final rule statement')
             if kind=='match':
                 constraint=restricted(value)
                 if constraint:constraints.add(constraint)
@@ -121,7 +125,14 @@ def analyze(snapshot):
                 if kind=='accept':accept=True
             elif kind=='reject':
                 if value is not None and not isinstance(value,dict):raise InputError('reject requires null or object')
-                if isinstance(value,dict) and not set(value).issubset({'type','expr'}):report.add('reject_semantics','OPEN',where,'Unknown reject attributes')
+                if isinstance(value,dict):
+                    if not set(value).issubset({'type','expr'}):report.add('reject_semantics','OPEN',where,'Unknown reject attributes')
+                    if 'type' in value:
+                        reject_type=string(value['type'],'reject.type')
+                        if reject_type not in ('tcp reset','icmpx','icmp','icmpv6'):
+                            report.add('reject_semantics','OPEN',where,'Unknown reject type')
+                    if 'expr' in value:
+                        report.add('reject_semantics','OPEN',where,'Explicit reject expression is outside the selected profile')
             else:unknown=True;report.add('expression','OPEN',where,'Unsupported verdict/expression '+kind)
         if accept:
             report.check('unrestricted_accept',bool(constraints),where,'Accept requires validated state/interface/source/port constraints')

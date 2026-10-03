@@ -1,13 +1,15 @@
 {
   "name": "NftIngressAudit",
-  "version": "0.1.2",
-  "status": "PASS",
-  "test_count": 17,
-  "wheel_sha256": "4c23a5f5b95711e4d4a135a9fe72d7485ca77f12ab5c6c035666875ba8406b52",
+  "version": "0.1.3",
   "author": "dhtfish98",
-  "wheel": "nft_ingress_audit-0.1.2-py3-none-any.whl",
-  "verification": "Rebuilt wheel, separate installed tests, package author metadata, runtime and retained third-party notice byte verification",
-  "record_kind": "Attribution patch verification",
-  "application_qualification": "OPEN",
-  "whole_upstream_equivalence": "OPEN"
+  "status": "PASS_LOCAL_FIXED_PROFILE",
+  "source_tests": 26,
+  "installed_tests": 26,
+  "wheel": "nft_ingress_audit-0.1.3-py3-none-any.whl",
+  "wheel_sha256": "f0f4214c2cbe52a312901bf6c279e1b2f6a51dd4a8a48fed838751e7acd0d7cd",
+  "runtime_source_wheel_installed_byte_match": true,
+  "retained_notice_bytes_match": true,
+  "base_public_commit": "ff0a41d992ff0334c158c81ae7e844dd7aa057ee",
+  "verification": "Fresh source suite, offline wheel build, new consumer installation and original independently generated counterexamples. macOS Python 3.14 only; effective Linux/Windows runtime and CVP approval remain OPEN.",
+  "record_kind": "Public audit selected-profile correction"
 }

@@ -1,0 +1,170 @@
+{
+  "name": "NftIngressAudit",
+  "version": "0.1.3",
+  "implementation_author": "dhtfish98",
+  "base_public_commit": "ff0a41d992ff0334c158c81ae7e844dd7aa057ee",
+  "current_verification": "PUBLIC_AUDIT_FIX_20261003.json",
+  "source_tree_sha256": "43e1b6500502208cbdc761a8a308fded12a30486cb96a4038227e076beb5430e",
+  "digest_contract": "SHA256 of canonical sorted-key compact JSON source_files; excludes generated provenance/current report, this self-manifest and artifacts. Complete final project list retained by reviewer.",
+  "source_files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "62c55001ff00e700cea9d8a5103659710ceb6d8a998c69c7b0cc77a7863bd88d",
+      "bytes": 761
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "8b188bf4462b2ef7a06ba861792cdda7b0ceaa66fbd055e5c5b29be71406a769",
+      "bytes": 79
+    },
+    {
+      "path": "ATTRIBUTION_UPDATE_20261002.json",
+      "sha256": "cb5dce7330c14d2b936bbb5f9e35a95c83aaeaabf07b7dd1da3af11cb1572fb2",
+      "bytes": 535
+    },
+    {
+      "path": "COPYRIGHT.md",
+      "sha256": "0989a74acaf06c56e82a734d27342f0bdf47258b708e88f57de464d95c094502",
+      "bytes": 435
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298",
+      "bytes": 1066
+    },
+    {
+      "path": "ORIGIN.md",
+      "sha256": "369b16a06c556c7d553c197d7b67f79a02793addd52ccf3ecf91408d819d0539",
+      "bytes": 1750
+    },
+    {
+      "path": "README.md",
+      "sha256": "8dd2717db4625f316ee0a2b7daa0b80d38279bb3b59a542ba5f710b833c5f9ca",
+      "bytes": 3650
+    },
+    {
+      "path": "REAUDIT_20261002.json",
+      "sha256": "ce02b6bbd81b7a1daac90f9a29c37908507bc39b9c1c58c857fa91d1d7ba21e5",
+      "bytes": 937
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "f2c1038668b9fb4109263f7031e915a654f721379f8e5611274bdc3426c1f393",
+      "bytes": 3500
+    },
+    {
+      "path": "backend.py",
+      "sha256": "9b0305381627c944e2f98442ffb8b58fbd6bd72623aa374b79036c3ac955443c",
+      "bytes": 2074
+    },
+    {
+      "path": "examples/expectations.json",
+      "sha256": "dc0af460d1852bac73542bb9b1eba87a91a32f020056793fe2765bff2437653e",
+      "bytes": 87
+    },
+    {
+      "path": "examples/good.json",
+      "sha256": "541e328a18e07f2dec6320fc465ac1ee7da900f3ab77b4cf18dbff4890fee493",
+      "bytes": 941
+    },
+    {
+      "path": "examples/incomplete.json",
+      "sha256": "25c9abfcbea8fe824e23648897c5bdc4b0f6318ee35cb97cf077d81e2fca78f2",
+      "bytes": 21
+    },
+    {
+      "path": "examples/malformed.json",
+      "sha256": "b1e41e251ab948af64c0cf146ab4246982e89103e54038530dc1b17c310265db",
+      "bytes": 55
+    },
+    {
+      "path": "examples/risky.json",
+      "sha256": "fc2664b46386a7b1d1bc4d95553a27e07e67d5e6418f141d495bc6a90fc4fd97",
+      "bytes": 592
+    },
+    {
+      "path": "package.json",
+      "sha256": "3ff53b4215d53bd49edc2f6e56ed5727e666777ccb42547f8ee7ddef10e9f008",
+      "bytes": 245
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "3bef4cb5c75f9b1722fa8c232182c999673efbd1b86fc0c8e07c599c9aff8dc8",
+      "bytes": 349
+    },
+    {
+      "path": "src/nft_ingress_audit/__init__.py",
+      "sha256": "44d33cab616d4cdba9d30e0be567077306fa17ac3bdb6a9bba27303dfc5e0b2e",
+      "bytes": 126
+    },
+    {
+      "path": "src/nft_ingress_audit/__main__.py",
+      "sha256": "b2f10addb56fec7227aabc8b2c1ee939339c7c59e51a53d6bd76b4201b0c5c2d",
+      "bytes": 98
+    },
+    {
+      "path": "src/nft_ingress_audit/cli.py",
+      "sha256": "31e7dfa346fc81f5a32945339f922408c9e233093bde986f4b1f9aa53c96790a",
+      "bytes": 197
+    },
+    {
+      "path": "src/nft_ingress_audit/common.py",
+      "sha256": "a67c5ca00d41ddba1fd15a406bff7d38079969126d9df818742949e63c347a50",
+      "bytes": 5288
+    },
+    {
+      "path": "src/nft_ingress_audit/engine.py",
+      "sha256": "b7a6f6c51c758934b7c38bc00232f1b5a66d7af817ceedd52c1d3e1115e7e081",
+      "bytes": 10524
+    },
+    {
+      "path": "tests/test_engine.py",
+      "sha256": "3a6f200940c637bb3f88aa1f9fd2d056efcb4f9e80dc3f90df1dfb6f11bb60d3",
+      "bytes": 2776
+    },
+    {
+      "path": "tests/test_input_contract.py",
+      "sha256": "413e583ee36c05644041917039cc5b7962362f3300b8c3cbbcd4a50a67f7405a",
+      "bytes": 1659
+    },
+    {
+      "path": "tests/test_reaudit.py",
+      "sha256": "07ae9904a2a30f0688ec811f775d323b86b9038baeededb625fc134ea5ff68b3",
+      "bytes": 2240
+    },
+    {
+      "path": "tests/test_terminal_order.py",
+      "sha256": "1b10787bfbf270dd84f08691c8fdb7dd6b58d1f67703ac0a0a4295965fc649b8",
+      "bytes": 4253
+    }
+  ],
+  "new_runtime_files": [
+    {
+      "path": "src/nft_ingress_audit/__init__.py",
+      "sha256": "44d33cab616d4cdba9d30e0be567077306fa17ac3bdb6a9bba27303dfc5e0b2e",
+      "bytes": 126
+    },
+    {
+      "path": "src/nft_ingress_audit/__main__.py",
+      "sha256": "b2f10addb56fec7227aabc8b2c1ee939339c7c59e51a53d6bd76b4201b0c5c2d",
+      "bytes": 98
+    },
+    {
+      "path": "src/nft_ingress_audit/cli.py",
+      "sha256": "31e7dfa346fc81f5a32945339f922408c9e233093bde986f4b1f9aa53c96790a",
+      "bytes": 197
+    },
+    {
+      "path": "src/nft_ingress_audit/common.py",
+      "sha256": "a67c5ca00d41ddba1fd15a406bff7d38079969126d9df818742949e63c347a50",
+      "bytes": 5288
+    },
+    {
+      "path": "src/nft_ingress_audit/engine.py",
+      "sha256": "b7a6f6c51c758934b7c38bc00232f1b5a66d7af817ceedd52c1d3e1115e7e081",
+      "bytes": 10524
+    }
+  ],
+  "upstream_source": "See unchanged frozen source references plus correction boundary in ORIGIN.md",
+  "whole_upstream_equivalence": "OPEN"
+}

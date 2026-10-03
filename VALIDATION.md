@@ -1,3 +1,13 @@
+# Current public-audit correction verification — 2026-10-03
+
+Version **0.1.3**: **26 source** and **26 fresh installed unittest cases PASS**. New wheel `nft_ingress_audit-0.1.3-py3-none-any.whl` SHA-256 `f0f4214c2cbe52a312901bf6c279e1b2f6a51dd4a8a48fed838751e7acd0d7cd` matched all runtime bytes and retained notice bytes. Installed console tests reject the original misclassified input, with ordinary supported controls retained. Current record: `PUBLIC_AUDIT_FIX_20261003.json`.
+
+Reproduce with `python -m pip install .`, `python -m unittest discover -s tests -v`, and `python -m pip wheel --no-deps --wheel-dir artifacts .`. Fresh macOS Python 3.14 checks are separate from future exact-commit Linux CI. No remote publication, effective host behavior, whole-upstream equivalence or CVP qualification/approval is asserted here.
+
+The following blocks are historical and preserve their original version, count and artifact hashes. They do not validate 0.1.3.
+
+---
+
 # Current package verification — 2026-10-02
 
 Version **0.1.2**: **17 installed unittest cases PASS**. The rebuilt package records `dhtfish98` as the new implementation author. Runtime files matched source and the separately installed wheel; retained third-party notices were checked.

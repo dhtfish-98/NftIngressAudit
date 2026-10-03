@@ -8,3 +8,7 @@ Upstream references are frozen below. Only policy data explicitly named in NOTIC
 
 - `COPYING` at `1afa761d59834c61a30bdf7ffb52a0afaa7d40f4`, SHA-256 `4ee1e51baf5f3166712fa0c3e01338c7257e50ddef245d28bb14ad68f6070ba5`: https://git.netfilter.org/nftables/tree/COPYING?id=1afa761d59834c61a30bdf7ffb52a0afaa7d40f4
 - `doc/libnftables-json.adoc` at `1afa761d59834c61a30bdf7ffb52a0afaa7d40f4`, SHA-256 `d5dfd4fe2ffed428b8698fa86641fdd03fdc733276460f74bccb41eb06645a00`: https://git.netfilter.org/nftables/tree/doc/libnftables-json.adoc?id=1afa761d59834c61a30bdf7ffb52a0afaa7d40f4
+
+## Current selected-profile correction (0.1.3)
+
+Terminal-verdict order follows the already frozen `libnftables-json.adoc` VERDICT/REJECT definitions: statements following accept/drop/reject/return/jump/goto are rejected. Reject type values require strings; unknown labels and explicit unmodeled code expressions remain OPEN. This remains a structural input review, with unsupported transfers, protocol applicability, native admission and packet behavior unverified.

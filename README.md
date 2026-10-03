@@ -1,6 +1,6 @@
 # NftIngressAudit
 
-Version **0.1.2**.
+Version **0.1.3**.
 
 New implementation author: **dhtfish98**. Copyright (c) 2026 dhtfish98 applies to the new implementation code. Upstream policy data, original notices and source references retain their original attribution.
 
@@ -20,3 +20,7 @@ Install `artifacts/*.whl` and run `nft-ingress-audit examples/good.json`, or `py
 The file CLI requires non-following, non-blocking descriptor support (`O_NOFOLLOW` and `O_NONBLOCK`). Missing capabilities return controlled ERROR without weakening safe-file reads. This profile targets capable macOS/Linux environments; native Windows file-CLI behavior has not been verified. Windows observations remain supplied JSON data.
 
 Anonymous counter objects accept only bounded unsigned packet/byte counts; invalid counter shapes/types are ERROR and unknown counter attributes are OPEN. Named counter references, log/comment statements and unknown table flags remain OPEN. Source-prefix objects require exactly addr/len before counting as exposure constraints.
+
+Terminal verdicts (`accept`, `drop`, `reject`, `return`, `jump`, `goto`) must be the last statement in the supplied rule. Trailing statements and multiple terminal verdicts are malformed selected input and return ERROR. Only matches preceding a supported accept can establish its declared constraints. Unsupported final jump/goto/return still remain OPEN; no traversal simulation is added.
+
+Default `reject: null` and `reject: {}` remain supported. Supplied reject `type` must be a string; unknown types remain OPEN. Known type labels are `tcp reset`, `icmpx`, `icmp`, and `icmpv6`. Any explicit reject `expr`, including empty/null carriers, remains OPEN because this profile does not evaluate ICMP code expressions or packet-protocol applicability. This does not add native ruleset admission or packet evaluation.
