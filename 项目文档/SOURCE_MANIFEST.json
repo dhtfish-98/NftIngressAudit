@@ -2,10 +2,10 @@
   "name": "NftIngressAudit",
   "version": "0.1.3",
   "implementation_author": "dhtfish98",
-  "base_public_commit": "ff0a41d992ff0334c158c81ae7e844dd7aa057ee",
+  "base_public_commit": "ea0cba75751b5f5b0dad8d53f1ec0ec3bb60d5b0",
   "current_verification": "PUBLIC_AUDIT_FIX_20261003.json",
-  "source_tree_sha256": "dbbbd54fd0033d1885bfb3a0d8169c7a382903b8f4e0eb26126bbbb2ce941c5b",
-  "digest_contract": "SHA256 of UTF-8 ensure_ascii=False sorted-key compact JSON source_files; self inventory and generated Build outputs excluded. Directory maintenance only, not a new safety semantic test.",
+  "source_tree_sha256": "450ef2423d5f068e300009f3f0e46e54c00a6778f3b710dda6521bd32da66f4d",
+  "digest_contract": "SHA256 of UTF-8 ensure_ascii=False sorted-key compact JSON source_files; the same selected31 application/metadata files are rehashed at current repository-relative paths. Self manifest, Build outputs and separately recorded provenance/validation reports remain excluded. Directory maintenance only, not a new safety semantic test.",
   "source_files": [
     {
       "path": ".github/workflows/verify.yml",
@@ -14,23 +14,13 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "0ccb9a04b7227999010a8f666529fe9e87d5218929ea76d953813fa69f815ede",
-      "bytes": 193
-    },
-    {
-      "path": "ATTRIBUTION_UPDATE_20261002.json",
-      "sha256": "cb5dce7330c14d2b936bbb5f9e35a95c83aaeaabf07b7dd1da3af11cb1572fb2",
-      "bytes": 535
+      "sha256": "0e12f6c9225d68d4e2616b18f0eee2c353b4b4f0d8cf0e1ffbb9c0f34d1a0be9",
+      "bytes": 210
     },
     {
       "path": "MANIFEST.in",
       "sha256": "0f5923d30d903957cdd2898bb55c6c123c1ed8b6f39bb712fb012a2efe3af617",
       "bytes": 470
-    },
-    {
-      "path": "REAUDIT_20261002.json",
-      "sha256": "ce02b6bbd81b7a1daac90f9a29c37908507bc39b9c1c58c857fa91d1d7ba21e5",
-      "bytes": 937
     },
     {
       "path": "backend.py",
@@ -123,9 +113,14 @@
       "path": "构建.py"
     },
     {
-      "sha256": "0a3360475a0b57618661927ef9bb6df4999f7e637132ec5296da7a270b7e32ab",
-      "bytes": 1101,
+      "sha256": "9f88a14d8dfbbc62a7dd46c85f79ae45aa758becdfc0637c657e2dcd3cf9df51",
+      "bytes": 2327,
       "path": "构建配置.json"
+    },
+    {
+      "path": "项目文档/ATTRIBUTION_UPDATE_20261002.json",
+      "sha256": "cb5dce7330c14d2b936bbb5f9e35a95c83aaeaabf07b7dd1da3af11cb1572fb2",
+      "bytes": 535
     },
     {
       "path": "项目文档/COPYRIGHT.md",
@@ -144,8 +139,13 @@
     },
     {
       "path": "项目文档/README.md",
-      "sha256": "5166d4172d61561d3b98292eff7e7f881bfa178842a8507b52b363eceb8d7f03",
-      "bytes": 4005
+      "sha256": "d2140aae47231c9a72902d227801fb4f55764395c295d4eff88e01eb3f53932c",
+      "bytes": 4099
+    },
+    {
+      "path": "项目文档/REAUDIT_20261002.json",
+      "sha256": "ce02b6bbd81b7a1daac90f9a29c37908507bc39b9c1c58c857fa91d1d7ba21e5",
+      "bytes": 937
     },
     {
       "path": "项目文档/VALIDATION.md",
@@ -198,5 +198,13 @@
     "original_inventory_sha256": "60966fbd8c65d3979a45813547b285f2a761609bb23bd3c6be5f2f88fe231743",
     "path_view": "Canonical repository paths; the builder also restores byte-identical legacy aliases under ignored Build for existing packaging checks",
     "scope": "Current file inventory and packaging paths only; runtime bytes/version/API unchanged. Historical validation and security conclusions are retained, not rerun or newly certified."
-  }
+  },
+  "source_inventory_excluded_paths": [
+    "Build/.gitignore",
+    "项目文档/BUILD_PROVENANCE.json",
+    "项目文档/PUBLIC_AUDIT_FIX_20261003.json",
+    "项目文档/SOURCE_MANIFEST.json",
+    "项目文档/artifacts/local-validation.json",
+    "项目文档/artifacts/validation.json"
+  ]
 }

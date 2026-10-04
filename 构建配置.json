@@ -6,6 +6,16 @@
   "base_public_commit": "c4ee320a8bc821186c4168b811921d9961f2fdf2",
   "restored_inputs": [
     {
+      "original": "ATTRIBUTION_UPDATE_20261002.json",
+      "stored": "项目文档/ATTRIBUTION_UPDATE_20261002.json",
+      "sha256": "cb5dce7330c14d2b936bbb5f9e35a95c83aaeaabf07b7dd1da3af11cb1572fb2"
+    },
+    {
+      "original": "BUILD_PROVENANCE.json",
+      "stored": "项目文档/BUILD_PROVENANCE.json",
+      "sha256": "c42ebd4b2cb58ae07d44d6d890bf4387dbcc12410b4a5cf8fd43ebc9930b3000"
+    },
+    {
       "original": "COPYRIGHT.md",
       "stored": "项目文档/COPYRIGHT.md",
       "sha256": "0989a74acaf06c56e82a734d27342f0bdf47258b708e88f57de464d95c094502"
@@ -21,14 +31,34 @@
       "sha256": "369b16a06c556c7d553c197d7b67f79a02793addd52ccf3ecf91408d819d0539"
     },
     {
+      "original": "PUBLIC_AUDIT_FIX_20261003.json",
+      "stored": "项目文档/PUBLIC_AUDIT_FIX_20261003.json",
+      "sha256": "9aef21f6ea4acab63e34e2b8d9052a6b697f515387de53df9f711179bbf1c0bb"
+    },
+    {
       "original": "README.md",
       "stored": "项目文档/README.md",
       "sha256": "d2140aae47231c9a72902d227801fb4f55764395c295d4eff88e01eb3f53932c"
     },
     {
+      "original": "REAUDIT_20261002.json",
+      "stored": "项目文档/REAUDIT_20261002.json",
+      "sha256": "ce02b6bbd81b7a1daac90f9a29c37908507bc39b9c1c58c857fa91d1d7ba21e5"
+    },
+    {
       "original": "VALIDATION.md",
       "stored": "项目文档/VALIDATION.md",
       "sha256": "f2c1038668b9fb4109263f7031e915a654f721379f8e5611274bdc3426c1f393"
+    },
+    {
+      "original": "artifacts/local-validation.json",
+      "stored": "项目文档/artifacts/local-validation.json",
+      "sha256": "9aef21f6ea4acab63e34e2b8d9052a6b697f515387de53df9f711179bbf1c0bb"
+    },
+    {
+      "original": "artifacts/validation.json",
+      "stored": "项目文档/artifacts/validation.json",
+      "sha256": "9aef21f6ea4acab63e34e2b8d9052a6b697f515387de53df9f711179bbf1c0bb"
     }
   ],
   "platform_entries": []
