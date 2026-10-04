@@ -12,7 +12,7 @@ Input is native `nft -j list ruleset` shape: `{"nftables":[{"metainfo":{"json_sc
 
 ## Use and output
 
-Install `artifacts/*.whl` and run `nft-ingress-audit examples/good.json`, or `python -m nft_ingress_audit examples/good.json`. Output is structured JSON with individual PASS/FAIL/OPEN evidence and aggregate counts. Exit codes: PASS 0, FAIL 1, ERROR 2, OPEN 3. Unsupported or incomplete evidence cannot exit 0. Input is at most 2 MiB, 32 layers and 100000 nodes; duplicate keys/nonfinite numbers are rejected. The same non-following/non-blocking fd must be regular and unchanged across reading. Findings are bounded to 20000.
+Install the matching wheel from the [v0.1.3 Release](https://github.com/dhtfish-98/NftIngressAudit/releases/tag/v0.1.3) and run `nft-ingress-audit examples/good.json`, or `python -m nft_ingress_audit examples/good.json`. Output is structured JSON with individual PASS/FAIL/OPEN evidence and aggregate counts. Exit codes: PASS 0, FAIL 1, ERROR 2, OPEN 3. Unsupported or incomplete evidence cannot exit 0. Input is at most 2 MiB, 32 layers and 100000 nodes; duplicate keys/nonfinite numbers are rejected. The same non-following/non-blocking fd must be regular and unchanged across reading. Findings are bounded to 20000.
 
 ## Evidence and limits
 
